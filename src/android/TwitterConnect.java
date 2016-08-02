@@ -43,6 +43,7 @@ import com.crashlytics.android.answers.ShareEvent;
 import com.crashlytics.android.answers.SignUpEvent;
 import com.crashlytics.android.answers.StartCheckoutEvent;
 
+
 public class TwitterConnect extends CordovaPlugin {
 
 	private static final String LOG_TAG = "Twitter Connect";
@@ -52,7 +53,9 @@ public class TwitterConnect extends CordovaPlugin {
 		super.initialize(cordova, webView);
 		// Add Answers and Crashlytics calls for https://github.com/emir-aydin-hs/FabricPlugin
 		// TODO: Remove the Answers and Crashlytics inits below once Fabric adds support for subsequent .with() calls
-		Fabric.with(cordova.getActivity().getApplicationContext(), new Crashlytics(), new Answers(), new Twitter(new TwitterAuthConfig(getTwitterKey(), getTwitterSecret())));
+		if (!Fabric.isInitialized()) {
+			Fabric.with(cordova.getActivity().getApplicationContext(), new Crashlytics(), new Answers(), new Twitter(new TwitterAuthConfig(getTwitterKey(), getTwitterSecret())));
+		}
 		Log.v(LOG_TAG, "Initialize TwitterConnect");
 	}
 
