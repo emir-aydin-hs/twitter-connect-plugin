@@ -24,25 +24,8 @@ import com.twitter.sdk.android.core.TwitterSession;
 import com.twitter.sdk.android.core.identity.TwitterLoginButton;
 
 import io.fabric.sdk.android.Fabric;
-
-// TODO: Remove below imports once Fabric adds support for subsequent .with() calls
 import com.crashlytics.android.Crashlytics;
-import com.crashlytics.android.answers.AddToCartEvent;
 import com.crashlytics.android.answers.Answers;
-import com.crashlytics.android.answers.AnswersEvent;
-import com.crashlytics.android.answers.ContentViewEvent;
-import com.crashlytics.android.answers.CustomEvent;
-import com.crashlytics.android.answers.InviteEvent;
-import com.crashlytics.android.answers.LevelEndEvent;
-import com.crashlytics.android.answers.LevelStartEvent;
-import com.crashlytics.android.answers.LoginEvent;
-import com.crashlytics.android.answers.PurchaseEvent;
-import com.crashlytics.android.answers.RatingEvent;
-import com.crashlytics.android.answers.SearchEvent;
-import com.crashlytics.android.answers.ShareEvent;
-import com.crashlytics.android.answers.SignUpEvent;
-import com.crashlytics.android.answers.StartCheckoutEvent;
-
 
 public class TwitterConnect extends CordovaPlugin {
 
