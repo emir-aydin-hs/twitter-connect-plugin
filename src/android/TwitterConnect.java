@@ -34,11 +34,12 @@ public class TwitterConnect extends CordovaPlugin {
 
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
+		Fabric.with(cordova.getActivity().getApplicationContext(), new Twitter(new TwitterAuthConfig(getTwitterKey(), getTwitterSecret())));
 		// Add Answers and Crashlytics calls for https://github.com/emir-aydin-hs/FabricPlugin
 		// TODO: Remove the Answers and Crashlytics inits below once Fabric adds support for subsequent .with() calls
-		if (!Fabric.isInitialized()) {
-			Fabric.with(cordova.getActivity().getApplicationContext(), new Crashlytics(), new Answers(), new Twitter(new TwitterAuthConfig(getTwitterKey(), getTwitterSecret())));
-		}
+		//if (!Fabric.isInitialized()) {
+		//	Fabric.with(cordova.getActivity().getApplicationContext(), new Crashlytics(), new Answers(), new Twitter(new TwitterAuthConfig(getTwitterKey(), getTwitterSecret())));
+		//}
 		Log.v(LOG_TAG, "Initialize TwitterConnect");
 	}
 
