@@ -1,7 +1,7 @@
 repositories {
 	jcenter()
-	maven {
-	}
+// 	maven {
+// 	}
 }
 
 dependencies {
