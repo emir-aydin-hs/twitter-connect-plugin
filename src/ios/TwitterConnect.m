@@ -1,20 +1,16 @@
 
 #import <Foundation/Foundation.h>
 #import "TwitterConnect.h"
-#import <Fabric/Fabric.h>
 #import <TwitterKit/TwitterKit.h>
 
 @implementation TwitterConnect
 
 - (void)pluginInitialize
 {
-    
+
     NSString* consumerKey = [self.commandDelegate.settings objectForKey:[@"TwitterConsumerKey" lowercaseString]];
     NSString* consumerSecret = [self.commandDelegate.settings objectForKey:[@"TwitterConsumerSecret" lowercaseString]];
     [[Twitter sharedInstance] startWithConsumerKey:consumerKey consumerSecret:consumerSecret];
-    [Fabric with:@[[Twitter sharedInstance]]];
-    
-    [Fabric with:@[TwitterKit]];
 }
 
 

@@ -1,18 +1,7 @@
 # twitter-connect-plugin
 Cordova/PhoneGap plugin to use Twitter Single Sign On
 
-Using Twitter's Fabric SDK, you can enable SSO with your Android and iOS apps. It's a fairly involved process, so I'll try to lay out every step necessary.
-
 ### Install
-
-##### Get a Fabric API key
-To use Fabric, you'll need to [sign up](https://get.fabric.io/twitter-login). Apparently they have to authorize people manually, so it might be a while until your account is created, mine took about an hour.
-
-The only thing we really need is the API key. Getting the API key is [fairly tricky](https://twittercommunity.com/t/how-can-i-get-apikey/26162/18), but this process seems to work:
-
-1. Login to Fabric account and open https://fabric.io/kits/android/crashlytics/install
-2. Find the meta-data code block in AndroidManifest.xml
-3. Find your API Key pre filled in the code.
 
 ##### Create a Twitter app
 Create a Twitter application and get the consumer key and consumer secret.
