@@ -1,20 +1,14 @@
 repositories {
 	jcenter()
-	maven { 
-		url 'https://maven.fabric.io/public' 
-	}  
+	maven {
+		url 'https://maven.fabric.io/public'
+	}
 }
 
 dependencies {
-  
+
 // Twitter Kit
 	compile('com.twitter.sdk.android:twitter:1.4.0@aar') {
 		transitive = true
-	}
-	compile('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
-		transitive = true;
-	}
-	compile('com.crashlytics.sdk.android:answers:1.4.3@aar') {
-		transitive = true;
 	}
 }
